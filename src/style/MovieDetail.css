@@ -1,0 +1,15 @@
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+p {
+  border: solid 2px gold;
+  padding: 5%;
+  width: 80%;
+  margin-left: 7.5%;
+  height: 10%;
+  font-size: 1.5em;
+}

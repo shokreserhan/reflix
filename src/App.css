@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+html {
+  background-color: black;
+  color: #fff;
+}
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +39,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+.navbar {
+  margin-top: 2em;
+}
+
+.navbar-link {
+  text-decoration: none;
+}
+.navbar-link {
+  color: #fff;
+  border: 1px solid gold;
+  margin: 1em 1em;
+  padding: 1em 5em;
+}
+
+.navbar-link:hover {
+  color: #fff;
+  border: 5px solid gold;
+  background-color: gold;
+  margin: 1em 1em;
+  padding: 1.2em 5.2em;
+  transition: 0.5s;
+}
+
+h1 {
+  margin-left: 1em;
+}
+
+.line {
+  width: 90%;
+  background-color: gold;
+  height: 5px;
+  margin-left: 5%;
+  margin-top: 5em;
 }

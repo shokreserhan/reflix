@@ -1,0 +1,79 @@
+.rented {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  margin-top: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  gap: 1rem;
+}
+
+.search-icon {
+  margin-left: 5em;
+  margin-right: 1em;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 7em;
+  padding-left: 13%;
+  padding-right: 13%;
+  gap: 5rem;
+}
+
+.movies {
+  position: relative;
+  border: solid gold 5px;
+}
+
+.movies:hover {
+  border: solid gold 8px;
+  transition: 1s;
+  width: 110%;
+  height: 110%;
+}
+
+.rent-button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 0;
+  left: 0;
+  width: 1.2em;
+  height: 1.2em;
+}
+.icon {
+  color: white;
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.icon:hover {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.movie-img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+}
+.search {
+  margin-top: 5em;
+  color: #fff;
+  border: 0;
+  border-bottom: 5px solid gold;
+  width: 20%;
+  outline: 0;
+  background: transparent;
+}
+
+.search:focus {
+  width: 40%;
+  font-size: 1.5em;
+  border-bottom: 5px solid gold;
+}

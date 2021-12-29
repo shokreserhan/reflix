@@ -1,0 +1,29 @@
+#Landing-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  margin-top: 10em;
+  height: 200px;
+  padding-left: 10%;
+  padding-right: 10%;
+  gap: 1rem;
+  color: #fff;
+}
+
+.landing {
+  padding: 7em;
+  text-decoration: none;
+  border: 5px gold solid;
+  color: #fff;
+}
+
+.landing:hover {
+  font-size: 1.1em;
+  padding: 8em;
+  transition: 0.8s;
+}
+
+h1 {
+  margin: 2em 0em;
+  text-align: center;
+}
