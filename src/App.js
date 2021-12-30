@@ -8,6 +8,7 @@ import MovieDetail from "./components/MovieDetail";
 class App extends Component {
   constructor() {
     super();
+    this.INITIAL_BUDGET = 10;
     this.state = {
       movies: [
         {
@@ -62,8 +63,24 @@ class App extends Component {
         { id: 2, budget: 160, name: "Mohammad", color: "#008B8B" },
         { id: 3, budget: 9, name: "Fadi", color: "#cacaca" },
       ],
+      budget : this.INITIAL_BUDGET,
     };
   }
+
+  handleBudget = (movieId, isRented) => {
+    let budget = this.state.budget;
+
+    if (budget < 3 && isRented) {
+      alert("No enough budget")
+    return null;
+    }
+
+    this.handleRent(movieId, isRented);
+
+    isRented ? budget -= 3: budget += 3;
+
+    this.setState({ budget });
+  };
 
   handleRent = (movieId, isRented) => {
     let movies = [...this.state.movies];
@@ -83,7 +100,7 @@ class App extends Component {
 
             <Route exact path="/" render={() => <Landing users={this.state.users}></Landing>} />
 
-            <Route exact path="/catalog" render={() => (<Catalog movies={this.state.movies} onRent={this.handleRent} />)}/>
+            <Route exact path="/catalog" render={() => (<Catalog budget={this.state.budget} movies={this.state.movies} onRent={this.handleBudget} />)}/>
 
             <Route exact path="/catalog/:movieId" render={({ match }) => (<MovieDetail match={match} movies={this.state.movies} /> )} />
           </div>
